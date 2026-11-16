@@ -3,7 +3,6 @@ package com.example.xaydung
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
-import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 
 class CreditCenterActivity : AppCompatActivity() {
@@ -12,15 +11,15 @@ class CreditCenterActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_credit_center)
 
-        findViewById<ImageView>(R.id.btnBack).setOnClickListener {
-            finish()
+        findViewById<View>(R.id.btnBack)?.setOnClickListener {
+            onBackPressedDispatcher.onBackPressed()
         }
 
-        findViewById<View>(R.id.cardRegisterCredit).setOnClickListener {
+        findViewById<View>(R.id.cardRegisterCredit)?.setOnClickListener {
             startActivity(Intent(this, CreditRegistrationActivity::class.java))
         }
 
-        findViewById<View>(R.id.cardTuitionStatus).setOnClickListener {
+        findViewById<View>(R.id.cardTuitionStatus)?.setOnClickListener {
             startActivity(Intent(this, TuitionStatusActivity::class.java))
         }
 
@@ -28,22 +27,22 @@ class CreditCenterActivity : AppCompatActivity() {
     }
 
     private fun setupBottomNavigation() {
-        findViewById<View>(R.id.navHome).setOnClickListener {
+        findViewById<View>(R.id.navHome)?.setOnClickListener {
             startActivity(Intent(this, MainActivity::class.java))
             finish()
         }
 
-        findViewById<View>(R.id.navSearch).setOnClickListener {
+        findViewById<View>(R.id.navSearch)?.setOnClickListener {
             startActivity(Intent(this, SearchNotificationActivity::class.java))
             finish()
         }
 
-        findViewById<View>(R.id.navSchedule).setOnClickListener {
+        findViewById<View>(R.id.navSchedule)?.setOnClickListener {
             startActivity(Intent(this, ScheduleActivity::class.java))
             finish()
         }
 
-        findViewById<View>(R.id.navMessage).setOnClickListener {
+        findViewById<View>(R.id.navMessage)?.setOnClickListener {
             startActivity(Intent(this, TeacherListActivity::class.java))
             finish()
         }

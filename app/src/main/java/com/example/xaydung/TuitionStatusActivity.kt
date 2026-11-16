@@ -1,7 +1,7 @@
 package com.example.xaydung
 
 import android.os.Bundle
-import android.widget.ImageView
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 
 class TuitionStatusActivity : AppCompatActivity() {
@@ -10,8 +10,8 @@ class TuitionStatusActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_tuition_status)
 
-        findViewById<ImageView>(R.id.btnBack).setOnClickListener {
-            finish()
+        findViewById<View>(R.id.btnBack)?.setOnClickListener {
+            onBackPressedDispatcher.onBackPressed()
         }
     }
 }
