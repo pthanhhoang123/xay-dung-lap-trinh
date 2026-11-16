@@ -2,7 +2,6 @@ package com.example.xaydung
 
 import android.content.Intent
 import android.os.Bundle
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.card.MaterialCardView
 
@@ -14,7 +13,8 @@ class MainActivity : AppCompatActivity() {
 
         val cardCourse = findViewById<MaterialCardView>(R.id.cardCourseManagement)
         val cardSchedule = findViewById<MaterialCardView>(R.id.cardSchedule)
-        val cardStudent = findViewById<MaterialCardView>(R.id.cardStudentManagement)
+        val cardGrades = findViewById<MaterialCardView>(R.id.cardGrades)
+        val cardProfile = findViewById<MaterialCardView>(R.id.cardProfile)
 
         cardCourse.setOnClickListener {
             val intent = Intent(this, CourseListActivity::class.java)
@@ -26,8 +26,14 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        cardStudent.setOnClickListener {
-            Toast.makeText(this, "Màn hình Quản lý học viên đang phát triển", Toast.LENGTH_SHORT).show()
+        cardGrades.setOnClickListener {
+            val intent = Intent(this, GradesActivity::class.java)
+            startActivity(intent)
+        }
+
+        cardProfile.setOnClickListener {
+            val intent = Intent(this, ProfileActivity::class.java)
+            startActivity(intent)
         }
     }
 }
