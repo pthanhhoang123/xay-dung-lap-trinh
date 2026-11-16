@@ -23,6 +23,8 @@ class CourseListActivity : AppCompatActivity() {
 
         toolbar = findViewById(R.id.toolbar)
         setSupportActionBar(toolbar)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        toolbar.setNavigationOnClickListener { finish() }
 
         recyclerView = findViewById(R.id.recyclerViewCourses)
         fabAdd = findViewById(R.id.fabAddCourse)
