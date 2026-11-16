@@ -1,9 +1,10 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
     <style name="Base.Theme.XayDung" parent="Theme.Material3.DayNight.NoActionBar">
-        <item name="colorPrimary">@color/primary_blue</item>
-        <item name="colorPrimaryDark">@color/primary_blue_dark</item>
-        <item name="colorSecondary">@color/primary_blue</item>
+        <item name="colorPrimary">@color/figma_blue</item>
+        <item name="colorPrimaryDark">@color/figma_blue_dark</item>
+        <item name="colorSecondary">@color/figma_blue</item>
+        <item name="android:windowBackground">@color/figma_bg</item>
     </style>
 
     <style name="Theme.XayDung" parent="Base.Theme.XayDung" />
