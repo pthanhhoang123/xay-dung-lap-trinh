@@ -13,10 +13,16 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val cardCourse = findViewById<MaterialCardView>(R.id.cardCourseManagement)
+        val cardSchedule = findViewById<MaterialCardView>(R.id.cardSchedule)
         val cardStudent = findViewById<MaterialCardView>(R.id.cardStudentManagement)
 
         cardCourse.setOnClickListener {
             val intent = Intent(this, CourseListActivity::class.java)
+            startActivity(intent)
+        }
+
+        cardSchedule.setOnClickListener {
+            val intent = Intent(this, ScheduleActivity::class.java)
             startActivity(intent)
         }
 

@@ -29,6 +29,10 @@
             android:name=".CourseDetailActivity"
             android:exported="false"
             android:parentActivityName=".CourseListActivity" />
+        <activity
+            android:name=".ScheduleActivity"
+            android:exported="false"
+            android:parentActivityName=".MainActivity" />
     </application>
 
 </manifest>
