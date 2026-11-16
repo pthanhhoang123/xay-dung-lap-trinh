@@ -23,28 +23,55 @@
         </activity>
         <activity
             android:name=".MainActivity"
-            android:exported="false"
-            android:parentActivityName=".LoginActivity" />
+            android:exported="false" />
         <activity
-            android:name=".CourseListActivity"
-            android:exported="false"
-            android:parentActivityName=".MainActivity" />
+            android:name=".SearchNotificationActivity"
+            android:exported="false" />
         <activity
-            android:name=".CourseDetailActivity"
-            android:exported="false"
-            android:parentActivityName=".CourseListActivity" />
+            android:name=".NotificationDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CreditCenterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CreditRegistrationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RegistrationResultActivity"
+            android:exported="false" />
+        <activity
+            android:name=".TuitionStatusActivity"
+            android:exported="false" />
+        <activity
+            android:name=".StudentProfileActivity"
+            android:exported="false" />
         <activity
             android:name=".ScheduleActivity"
-            android:exported="false"
-            android:parentActivityName=".MainActivity" />
+            android:exported="false" />
+        <activity
+            android:name=".SubjectDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".TeacherListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ChatActivity"
+            android:exported="false" />
+        <activity
+            android:name=".TeacherInfoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CourseListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CourseDetailActivity"
+            android:exported="false" />
         <activity
             android:name=".GradesActivity"
-            android:exported="false"
-            android:parentActivityName=".MainActivity" />
+            android:exported="false" />
         <activity
             android:name=".ProfileActivity"
-            android:exported="false"
-            android:parentActivityName=".MainActivity" />
+            android:exported="false" />
     </application>
 
 </manifest>
