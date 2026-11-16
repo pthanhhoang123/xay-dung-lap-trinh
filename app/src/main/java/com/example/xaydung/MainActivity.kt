@@ -1,20 +1,27 @@
 package com.example.xaydung
 
+import android.content.Intent
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
+import com.google.android.material.card.MaterialCardView
 
 class MainActivity : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
         setContentView(R.layout.activity_main)
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
+
+        val cardCourse = findViewById<MaterialCardView>(R.id.cardCourseManagement)
+        val cardStudent = findViewById<MaterialCardView>(R.id.cardStudentManagement)
+
+        cardCourse.setOnClickListener {
+            val intent = Intent(this, CourseListActivity::class.java)
+            startActivity(intent)
+        }
+
+        cardStudent.setOnClickListener {
+            Toast.makeText(this, "Màn hình Quản lý học viên đang phát triển", Toast.LENGTH_SHORT).show()
         }
     }
 }
