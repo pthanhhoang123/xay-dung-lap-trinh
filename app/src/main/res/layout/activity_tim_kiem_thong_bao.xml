@@ -33,6 +33,8 @@
                     android:layout_width="24dp"
                     android:layout_height="24dp"
                     android:layout_gravity="center"
+                    android:clickable="false"
+                    android:focusable="false"
                     android:src="@android:drawable/ic_menu_revert"
                     android:contentDescription="Back"
                     app:tint="@color/figma_text_primary" />
