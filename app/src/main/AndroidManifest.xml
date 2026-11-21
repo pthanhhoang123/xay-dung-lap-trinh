@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.XayDung">
         <activity
-            android:name=".LoginActivity"
+            android:name=".DangNhapActivity"
             android:exported="true"
             android:windowSoftInputMode="adjustResize">
             <intent-filter>
@@ -22,55 +22,43 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name=".TrangChuActivity"
             android:exported="false" />
         <activity
-            android:name=".SearchNotificationActivity"
+            android:name=".TimKiemThongBaoActivity"
             android:exported="false" />
         <activity
-            android:name=".NotificationDetailActivity"
+            android:name=".ChiTietThongBaoActivity"
             android:exported="false" />
         <activity
-            android:name=".CreditCenterActivity"
+            android:name=".TinChiActivity"
             android:exported="false" />
         <activity
-            android:name=".CreditRegistrationActivity"
+            android:name=".DangKyTinChiActivity"
             android:exported="false" />
         <activity
-            android:name=".RegistrationResultActivity"
+            android:name=".KetQuaDangKyActivity"
             android:exported="false" />
         <activity
-            android:name=".TuitionStatusActivity"
+            android:name=".TinhTrangHocPhiActivity"
             android:exported="false" />
         <activity
-            android:name=".StudentProfileActivity"
+            android:name=".CaNhanActivity"
             android:exported="false" />
         <activity
-            android:name=".ScheduleActivity"
+            android:name=".LichHocActivity"
             android:exported="false" />
         <activity
-            android:name=".SubjectDetailActivity"
+            android:name=".ThongTinMonHocActivity"
             android:exported="false" />
         <activity
-            android:name=".TeacherListActivity"
+            android:name=".TinNhanActivity"
             android:exported="false" />
         <activity
-            android:name=".ChatActivity"
+            android:name=".NhanTinActivity"
             android:exported="false" />
         <activity
-            android:name=".TeacherInfoActivity"
-            android:exported="false" />
-        <activity
-            android:name=".CourseListActivity"
-            android:exported="false" />
-        <activity
-            android:name=".CourseDetailActivity"
-            android:exported="false" />
-        <activity
-            android:name=".GradesActivity"
-            android:exported="false" />
-        <activity
-            android:name=".ProfileActivity"
+            android:name=".ThongTinGiangVienActivity"
             android:exported="false" />
     </application>
 
