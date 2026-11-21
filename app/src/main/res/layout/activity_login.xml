@@ -79,6 +79,7 @@
                 app:boxCornerRadiusBottomEnd="12dp"
                 app:boxStrokeColor="@color/figma_blue"
                 app:hintTextColor="@color/figma_blue"
+                app:placeholderText="Nhập mã số sinh viên"
                 android:hint="Mã số sinh viên">
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -86,7 +87,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="text"
-                    android:hint="Nhập mã số sinh viên"
                     android:textSize="15sp" />
 
             </com.google.android.material.textfield.TextInputLayout>
@@ -103,6 +103,7 @@
                 app:boxStrokeColor="@color/figma_blue"
                 app:hintTextColor="@color/figma_blue"
                 app:endIconMode="password_toggle"
+                app:placeholderText="Nhập mật khẩu"
                 android:hint="Mật khẩu">
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -110,7 +111,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="textPassword"
-                    android:hint="Nhập mật khẩu"
                     android:textSize="15sp" />
 
             </com.google.android.material.textfield.TextInputLayout>
