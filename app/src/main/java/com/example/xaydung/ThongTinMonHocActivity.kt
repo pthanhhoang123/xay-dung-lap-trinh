@@ -11,9 +11,9 @@ class ThongTinMonHocActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_thong_tin_mon_hoc)
 
-        findViewById<View>(R.id.btnBack)?.setOnClickListener {
-            onBackPressedDispatcher.onBackPressed()
-        }
+        val backClick = View.OnClickListener { finish() }
+        findViewById<View>(R.id.btnBackContainer)?.setOnClickListener(backClick)
+        findViewById<View>(R.id.btnBack)?.setOnClickListener(backClick)
 
         findViewById<View>(R.id.cardLecturer)?.setOnClickListener {
             startActivity(Intent(this, ThongTinGiangVienActivity::class.java))

@@ -11,9 +11,9 @@ class TimKiemThongBaoActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_tim_kiem_thong_bao)
 
-        findViewById<View>(R.id.btnBack)?.setOnClickListener {
-            onBackPressedDispatcher.onBackPressed()
-        }
+        val backClick = View.OnClickListener { finish() }
+        findViewById<View>(R.id.btnBackContainer)?.setOnClickListener(backClick)
+        findViewById<View>(R.id.btnBack)?.setOnClickListener(backClick)
 
         setupBottomNavigation()
     }

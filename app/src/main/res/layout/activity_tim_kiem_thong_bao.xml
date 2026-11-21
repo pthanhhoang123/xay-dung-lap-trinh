@@ -16,26 +16,33 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:padding="16dp"
+            android:padding="12dp"
             android:gravity="center_vertical">
 
-            <ImageView
-                android:id="@+id/btnBack"
+            <FrameLayout
+                android:id="@+id/btnBackContainer"
                 android:layout_width="44dp"
                 android:layout_height="44dp"
-                android:padding="10dp"
                 android:clickable="true"
                 android:focusable="true"
-                android:background="?attr/selectableItemBackgroundBorderless"
-                android:src="@android:drawable/ic_menu_revert"
-                android:contentDescription="Back"
-                app:tint="@color/figma_text_primary" />
+                android:elevation="10dp"
+                android:background="?attr/selectableItemBackgroundBorderless">
+
+                <ImageView
+                    android:id="@+id/btnBack"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="center"
+                    android:src="@android:drawable/ic_menu_revert"
+                    android:contentDescription="Back"
+                    app:tint="@color/figma_text_primary" />
+            </FrameLayout>
 
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="44dp"
                 android:layout_weight="1"
-                android:layout_marginStart="12dp"
+                android:layout_marginStart="8dp"
                 android:background="@drawable/bg_tag_chip"
                 android:orientation="horizontal"
                 android:gravity="center_vertical"

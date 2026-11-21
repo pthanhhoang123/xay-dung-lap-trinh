@@ -11,9 +11,9 @@ class TinChiActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_tin_chi)
 
-        findViewById<View>(R.id.btnBack)?.setOnClickListener {
-            onBackPressedDispatcher.onBackPressed()
-        }
+        val backClick = View.OnClickListener { finish() }
+        findViewById<View>(R.id.btnBackContainer)?.setOnClickListener(backClick)
+        findViewById<View>(R.id.btnBack)?.setOnClickListener(backClick)
 
         findViewById<View>(R.id.cardRegisterCredit)?.setOnClickListener {
             startActivity(Intent(this, DangKyTinChiActivity::class.java))

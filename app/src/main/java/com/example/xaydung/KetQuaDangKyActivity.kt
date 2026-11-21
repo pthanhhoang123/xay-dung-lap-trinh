@@ -16,9 +16,9 @@ class KetQuaDangKyActivity : AppCompatActivity() {
         findViewById<TextView>(R.id.tvResultDesc)?.text =
             "Hệ thống đã ghi nhận danh sách môn học đăng ký của sinh viên ${UserSession.getStudentName(this)}."
 
-        findViewById<View>(R.id.btnBack)?.setOnClickListener {
-            onBackPressedDispatcher.onBackPressed()
-        }
+        val backClick = View.OnClickListener { finish() }
+        findViewById<View>(R.id.btnBackContainer)?.setOnClickListener(backClick)
+        findViewById<View>(R.id.btnBack)?.setOnClickListener(backClick)
 
         findViewById<MaterialButton>(R.id.btnGoHome)?.setOnClickListener {
             val intent = Intent(this, TrangChuActivity::class.java)

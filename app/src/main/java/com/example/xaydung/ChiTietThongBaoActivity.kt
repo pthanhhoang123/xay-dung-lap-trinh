@@ -12,9 +12,9 @@ class ChiTietThongBaoActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_chi_tiet_thong_bao)
 
-        findViewById<View>(R.id.btnBack)?.setOnClickListener {
-            onBackPressedDispatcher.onBackPressed()
-        }
+        val backClick = View.OnClickListener { finish() }
+        findViewById<View>(R.id.btnBackContainer)?.setOnClickListener(backClick)
+        findViewById<View>(R.id.btnBack)?.setOnClickListener(backClick)
 
         findViewById<MaterialButton>(R.id.btnIntegrateSchedule)?.setOnClickListener {
             Toast.makeText(this, "Đã tích hợp lịch học bù vào lịch cá nhân!", Toast.LENGTH_SHORT).show()

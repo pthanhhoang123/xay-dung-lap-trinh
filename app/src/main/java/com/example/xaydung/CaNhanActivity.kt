@@ -16,9 +16,9 @@ class CaNhanActivity : AppCompatActivity() {
         findViewById<TextView>(R.id.tvProfileName)?.text = UserSession.getStudentName(this)
         findViewById<TextView>(R.id.tvProfileStudentId)?.text = UserSession.getStudentId(this)
 
-        findViewById<View>(R.id.btnBack)?.setOnClickListener {
-            onBackPressedDispatcher.onBackPressed()
-        }
+        val backClick = View.OnClickListener { finish() }
+        findViewById<View>(R.id.btnBackContainer)?.setOnClickListener(backClick)
+        findViewById<View>(R.id.btnBack)?.setOnClickListener(backClick)
 
         findViewById<MaterialButton>(R.id.btnLogout)?.setOnClickListener {
             val intent = Intent(this, DangNhapActivity::class.java)

@@ -12,9 +12,9 @@ class ThongTinGiangVienActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_thong_tin_giang_vien)
 
-        findViewById<View>(R.id.btnBack)?.setOnClickListener {
-            onBackPressedDispatcher.onBackPressed()
-        }
+        val backClick = View.OnClickListener { finish() }
+        findViewById<View>(R.id.btnBackContainer)?.setOnClickListener(backClick)
+        findViewById<View>(R.id.btnBack)?.setOnClickListener(backClick)
 
         findViewById<MaterialButton>(R.id.btnContact)?.setOnClickListener {
             Toast.makeText(this, "Đang kết nối liên hệ với ThS. Đỗ Phú Huy", Toast.LENGTH_SHORT).show()

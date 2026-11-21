@@ -12,9 +12,9 @@ class DangKyTinChiActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_dang_ky_tin_chi)
 
-        findViewById<View>(R.id.btnBack)?.setOnClickListener {
-            onBackPressedDispatcher.onBackPressed()
-        }
+        val backClick = View.OnClickListener { finish() }
+        findViewById<View>(R.id.btnBackContainer)?.setOnClickListener(backClick)
+        findViewById<View>(R.id.btnBack)?.setOnClickListener(backClick)
 
         findViewById<MaterialButton>(R.id.btnConfirmRegistration)?.setOnClickListener {
             val intent = Intent(this, KetQuaDangKyActivity::class.java)
