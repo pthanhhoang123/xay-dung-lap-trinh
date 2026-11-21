@@ -12,6 +12,8 @@ class ChiTietThongBaoActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_chi_tiet_thong_bao)
 
+        applyTopInsetPadding(findViewById(R.id.headerToolbar))
+
         val backClick = View.OnClickListener { finish() }
         findViewById<View>(R.id.btnBackContainer)?.setOnClickListener(backClick)
         findViewById<View>(R.id.btnBack)?.setOnClickListener(backClick)

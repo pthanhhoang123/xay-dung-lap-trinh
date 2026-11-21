@@ -11,6 +11,8 @@ class TimKiemThongBaoActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_tim_kiem_thong_bao)
 
+        applyTopInsetPadding(findViewById<View>(R.id.btnBackContainer))
+
         val backClick = View.OnClickListener { finish() }
         findViewById<View>(R.id.btnBackContainer)?.setOnClickListener(backClick)
         findViewById<View>(R.id.btnBack)?.setOnClickListener(backClick)

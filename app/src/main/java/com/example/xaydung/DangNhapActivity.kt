@@ -15,24 +15,17 @@ class DangNhapActivity : AppCompatActivity() {
         setContentView(R.layout.activity_dang_nhap)
 
         val etStudentId = findViewById<TextInputEditText>(R.id.etStudentId)
-        val etPassword = findViewById<TextInputEditText>(R.id.etPassword)
         val btnLogin = findViewById<MaterialButton>(R.id.btnLogin)
         val tvForgotPassword = findViewById<TextView>(R.id.tvForgotPassword)
 
         btnLogin.setOnClickListener {
             val studentId = etStudentId.text.toString().trim()
-            val password = etPassword.text.toString().trim()
-
-            if (studentId.isEmpty() || password.isEmpty()) {
-                Toast.makeText(this, "Vui lòng nhập đầy đủ mã số sinh viên và mật khẩu", Toast.LENGTH_SHORT).show()
-            } else {
-                UserSession.saveUser(this, studentId)
-                val studentName = UserSession.getStudentName(this)
-                Toast.makeText(this, "Xin chào $studentName!", Toast.LENGTH_SHORT).show()
-                val intent = Intent(this, TrangChuActivity::class.java)
-                startActivity(intent)
-                finish()
-            }
+            UserSession.saveUser(this, studentId)
+            val studentName = UserSession.getStudentName(this)
+            Toast.makeText(this, "Xin chào $studentName!", Toast.LENGTH_SHORT).show()
+            val intent = Intent(this, TrangChuActivity::class.java)
+            startActivity(intent)
+            finish()
         }
 
         tvForgotPassword.setOnClickListener {
