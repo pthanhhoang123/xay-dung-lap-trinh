@@ -3,6 +3,7 @@ package com.example.xaydung
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.button.MaterialButton
 
@@ -11,6 +12,9 @@ class KetQuaDangKyActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_ket_qua_dang_ky)
+
+        findViewById<TextView>(R.id.tvResultDesc)?.text =
+            "Hệ thống đã ghi nhận danh sách môn học đăng ký của sinh viên ${UserSession.getStudentName(this)}."
 
         findViewById<View>(R.id.btnBack)?.setOnClickListener {
             onBackPressedDispatcher.onBackPressed()

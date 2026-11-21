@@ -3,6 +3,7 @@ package com.example.xaydung
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.button.MaterialButton
 
@@ -11,6 +12,9 @@ class CaNhanActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_ca_nhan)
+
+        findViewById<TextView>(R.id.tvProfileName)?.text = UserSession.getStudentName(this)
+        findViewById<TextView>(R.id.tvProfileStudentId)?.text = UserSession.getStudentId(this)
 
         findViewById<View>(R.id.btnBack)?.setOnClickListener {
             onBackPressedDispatcher.onBackPressed()

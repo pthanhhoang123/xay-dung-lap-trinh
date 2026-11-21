@@ -26,7 +26,9 @@ class DangNhapActivity : AppCompatActivity() {
             if (studentId.isEmpty() || password.isEmpty()) {
                 Toast.makeText(this, "Vui lòng nhập đầy đủ mã số sinh viên và mật khẩu", Toast.LENGTH_SHORT).show()
             } else {
-                Toast.makeText(this, "Đăng nhập thành công!", Toast.LENGTH_SHORT).show()
+                UserSession.saveUser(this, studentId)
+                val studentName = UserSession.getStudentName(this)
+                Toast.makeText(this, "Xin chào $studentName!", Toast.LENGTH_SHORT).show()
                 val intent = Intent(this, TrangChuActivity::class.java)
                 startActivity(intent)
                 finish()

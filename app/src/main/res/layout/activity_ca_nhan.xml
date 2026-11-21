@@ -66,6 +66,7 @@
                     android:padding="20dp">
 
                     <TextView
+                        android:id="@+id/tvProfileName"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Nguyễn Thanh Tâm"
@@ -101,6 +102,7 @@
                             android:textSize="13sp" />
 
                         <TextView
+                            android:id="@+id/tvProfileStudentId"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="23115141122117"

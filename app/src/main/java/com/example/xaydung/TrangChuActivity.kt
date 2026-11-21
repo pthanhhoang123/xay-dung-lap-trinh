@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.ImageView
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.card.MaterialCardView
 
@@ -12,6 +13,8 @@ class TrangChuActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_trang_chu)
+
+        findViewById<TextView>(R.id.tvUserName)?.text = UserSession.getStudentName(this)
 
         findViewById<ImageView>(R.id.imgAvatar).setOnClickListener {
             startActivity(Intent(this, CaNhanActivity::class.java))
