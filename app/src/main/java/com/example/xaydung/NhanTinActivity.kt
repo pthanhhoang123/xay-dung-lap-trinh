@@ -15,8 +15,11 @@ class NhanTinActivity : AppCompatActivity() {
         findViewById<View>(R.id.btnBackContainer)?.setOnClickListener(backClick)
         findViewById<View>(R.id.btnBack)?.setOnClickListener(backClick)
 
-        findViewById<View>(R.id.btnInfo)?.setOnClickListener {
+        val openTeacherInfo = View.OnClickListener {
             startActivity(Intent(this, ThongTinGiangVienActivity::class.java))
         }
+        findViewById<View>(R.id.headerTeacherInfo)?.setOnClickListener(openTeacherInfo)
+        findViewById<View>(R.id.btnInfoContainer)?.setOnClickListener(openTeacherInfo)
+        findViewById<View>(R.id.btnInfo)?.setOnClickListener(openTeacherInfo)
     }
 }

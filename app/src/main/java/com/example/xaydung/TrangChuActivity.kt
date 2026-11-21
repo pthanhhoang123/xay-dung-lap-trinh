@@ -16,15 +16,18 @@ class TrangChuActivity : AppCompatActivity() {
 
         findViewById<TextView>(R.id.tvUserName)?.text = UserSession.getStudentName(this)
 
-        findViewById<ImageView>(R.id.imgAvatar).setOnClickListener {
+        val openProfile = View.OnClickListener {
             startActivity(Intent(this, CaNhanActivity::class.java))
         }
 
-        findViewById<MaterialCardView>(R.id.cardNotification1).setOnClickListener {
+        findViewById<View>(R.id.headerProfile)?.setOnClickListener(openProfile)
+        findViewById<ImageView>(R.id.imgAvatar)?.setOnClickListener(openProfile)
+
+        findViewById<MaterialCardView>(R.id.cardNotification1)?.setOnClickListener {
             startActivity(Intent(this, ChiTietThongBaoActivity::class.java))
         }
 
-        findViewById<MaterialCardView>(R.id.cardNotification2).setOnClickListener {
+        findViewById<MaterialCardView>(R.id.cardNotification2)?.setOnClickListener {
             startActivity(Intent(this, ChiTietThongBaoActivity::class.java))
         }
 
@@ -32,19 +35,19 @@ class TrangChuActivity : AppCompatActivity() {
     }
 
     private fun setupBottomNavigation() {
-        findViewById<View>(R.id.navSearch).setOnClickListener {
+        findViewById<View>(R.id.navSearch)?.setOnClickListener {
             startActivity(Intent(this, TimKiemThongBaoActivity::class.java))
         }
 
-        findViewById<View>(R.id.navSchedule).setOnClickListener {
+        findViewById<View>(R.id.navSchedule)?.setOnClickListener {
             startActivity(Intent(this, LichHocActivity::class.java))
         }
 
-        findViewById<View>(R.id.navCredit).setOnClickListener {
+        findViewById<View>(R.id.navCredit)?.setOnClickListener {
             startActivity(Intent(this, TinChiActivity::class.java))
         }
 
-        findViewById<View>(R.id.navMessage).setOnClickListener {
+        findViewById<View>(R.id.navMessage)?.setOnClickListener {
             startActivity(Intent(this, TinNhanActivity::class.java))
         }
     }

@@ -15,9 +15,13 @@ class TinNhanActivity : AppCompatActivity() {
         findViewById<View>(R.id.btnBackContainer)?.setOnClickListener(backClick)
         findViewById<View>(R.id.btnBack)?.setOnClickListener(backClick)
 
-        findViewById<View>(R.id.cardTeacher1)?.setOnClickListener {
+        val openChat = View.OnClickListener {
             startActivity(Intent(this, NhanTinActivity::class.java))
         }
+        findViewById<View>(R.id.cardTeacher1)?.setOnClickListener(openChat)
+        findViewById<View>(R.id.cardTeacher2)?.setOnClickListener(openChat)
+        findViewById<View>(R.id.cardTeacher3)?.setOnClickListener(openChat)
+        findViewById<View>(R.id.cardTeacher4)?.setOnClickListener(openChat)
 
         setupBottomNavigation()
     }
